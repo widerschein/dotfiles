@@ -10,8 +10,11 @@ eval "$(dircolors -b)"
 # Completion
 #------------------------------------
 
+#zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
-zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 zstyle ':completion:*' verbose yes
 
@@ -20,12 +23,10 @@ zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' format '%F{yellow}%d%f'
-zstyle ':completion:*' max-errors 1 numeric
 zstyle ':completion:*' original false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle :compinstall filename '/home/sharkus/.zshrc'
-
 
 
 # Directories
@@ -44,6 +45,7 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 zstyle ':completion:*:*:gdb:*' command 'ps -u $LOGNAME -o pid,user,command -w'
 
 
+setopt COMPLETE_IN_WORD
 setopt AUTO_MENU           # Show completion menu on a successive tab press.
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 
@@ -52,17 +54,17 @@ setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 #------------------------------------
 
 alias ls='ls --color'
-alias ll='ls -l'
+alias ll='ls -hal'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+alias pac='sudo pacman'
+alias r='ranger'
+alias nv='nvim'
 
-alias r=ranger
-alias nv=nvim
 #------------------------------------
 # Prompt
 #------------------------------------
-
 
 
 autoload -Uz vcs_info
@@ -92,6 +94,7 @@ setprompt
 #------------------------------------
 # History
 #------------------------------------
+
 HISTFILE=~/.histfile
 HISTSIZE=9000
 SAVEHIST=9000
