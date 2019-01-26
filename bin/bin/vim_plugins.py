@@ -4,6 +4,7 @@
 import os
 import sys
 import argparse
+import subprocess
 
 parser = argparse.ArgumentParser(description="Manage Vim plugins")
 parser.add_argument("what", help="Manage bundle", choices=["init", "update"])
@@ -24,6 +25,7 @@ plugins = {
         "gitgutter":"https://github.com/airblade/vim-gitgutter.git",
         "gundo":"https://github.com/sjl/gundo.vim.git",
         "is":"https://github.com/haya14busa/is.vim.git",
+        "javascript":"https://github.com/pangloss/vim-javascript.git",
         "jedi-vim":"https://github.com/davidhalter/jedi-vim.git",
         "misc":"https://github.com/xolox/vim-misc.git",
         "nerdcommenter":"https://github.com/scrooloose/nerdcommenter.git",
@@ -36,6 +38,7 @@ plugins = {
         "surround":"https://github.com/tpope/vim-surround.git",
         "tabular":"https://github.com/godlygeek/tabular.git",
         "tagbar":"https://github.com/majutsushi/tagbar.git",
+        "tern":"https://github.com/ternjs/tern_for_vim.git",
         "ultisnips":"https://github.com/SirVer/ultisnips.git",
         "unimpaired":"https://github.com/tpope/vim-unimpaired.git",
         "unite":"https://github.com/Shougo/unite.vim.git",
@@ -58,9 +61,13 @@ if __name__=="__main__":
 
     if args.what == "update":
         for p in plugins:
-            os.chdir(os.path.join(bundle, p))
-            os.system("git pull")
-            os.chdir(bundle)
+
+            print("* Updating {}".format(p))
+            print(subprocess.check_output(
+                ["git", "pull"],
+                text=True,
+                stderr=subprocess.STDOUT,
+                cwd=os.path.join(bundle, p)))
 
     else:
         pass
