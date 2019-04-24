@@ -1,3 +1,20 @@
+if [ -f ~/.dynardorc ]; then
+    . ~/.dynardorc 
+fi
+
+#export PATH=$PATH:$HOME/.local/bin:$HOME/bin_dev
+
+export EDITOR=nvim
+
+# autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+
+# completions
+#fpath=(~/Programme/zsh-completions/src $fpath)
+
+setxkbmap -option ctrl:nocaps
+
+
 autoload -U colors zsh/terminfo
 autoload -Uz compinit
 
@@ -10,11 +27,8 @@ eval "$(dircolors -b)"
 # Completion
 #------------------------------------
 
-#zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
-zstyle ':completion:*' completer _complete _match _approximate
-zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
 
+zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 zstyle ':completion:*' verbose yes
 
@@ -23,10 +37,12 @@ zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' format '%F{yellow}%d%f'
+zstyle ':completion:*' max-errors 1 numeric
 zstyle ':completion:*' original false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle :compinstall filename '/home/sharkus/.zshrc'
+
 
 
 # Directories
@@ -54,13 +70,12 @@ setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 #------------------------------------
 
 alias ls='ls --color'
-alias ll='ls -hal'
+alias ll='ls -l'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias pac='sudo pacman'
-alias r='ranger'
 alias nv='nvim'
+alias r='ranger'
 
 #------------------------------------
 # Prompt
@@ -94,7 +109,6 @@ setprompt
 #------------------------------------
 # History
 #------------------------------------
-
 HISTFILE=~/.histfile
 HISTSIZE=9000
 SAVEHIST=9000
@@ -108,3 +122,8 @@ setopt hist_ignore_dups
 
 bindkey -e
 #unsetopt menu_complete
+
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[3~" delete-char
+
