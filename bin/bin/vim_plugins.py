@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
@@ -10,14 +10,13 @@ parser = argparse.ArgumentParser(description="Manage Vim plugins")
 parser.add_argument("what", help="Manage bundle", choices=["init", "update"])
 
 plugins = {
-        # "a":"url1",
+        "a":"https://github.com/vim-scripts/a.vim.git",
         "ack":"https://github.com/mileszs/ack.vim.git",
-        "airline":"https://github.com/vim-airline/vim-airline.git",
-        "airline-themes":"https://github.com/vim-airline/vim-airline-themes.git",
         "auto-pairs":"https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks":"https://github.com/MattesGroeger/vim-bookmarks.git",
         "ctrlp":"https://github.com/ctrlpvim/ctrlp.vim.git",
         "denite":"https://github.com/Shougo/denite.nvim.git",
+        "deoplete":"https://github.com/Shougo/deoplete.nvim.git",
         "dirvish":"https://github.com/justinmk/vim-dirvish.git",
         "dispatch":"https://github.com/tpope/vim-dispatch.git",
         "easymotion":"https://github.com/easymotion/vim-easymotion.git",
@@ -40,13 +39,10 @@ plugins = {
         "tagbar":"https://github.com/majutsushi/tagbar.git",
         "tern":"https://github.com/ternjs/tern_for_vim.git",
         "ultisnips":"https://github.com/SirVer/ultisnips.git",
-        "unimpaired":"https://github.com/tpope/vim-unimpaired.git",
+        # "unimpaired":"https://github.com/tpope/vim-unimpaired.git",
         "unite":"https://github.com/Shougo/unite.vim.git",
-        "unite-gtags":"https://github.com/hewes/unite-gtags.git",
         "unite-outline":"https://github.com/Shougo/unite-outline.git",
-        "unite-tag":"https://github.com/tsukkee/unite-tag.git",
         "vim-colors-solarized":"https://github.com/altercation/vim-colors-solarized.git",
-        "vimwiki":"https://github.com/vimwiki/vimwiki.git",
         }
 
 
@@ -57,10 +53,10 @@ if __name__=="__main__":
     bundle = os.path.join(os.path.expanduser("~"), ".vim", "bundle")
     os.chdir(bundle)
 
-    plugins = os.listdir()
+    installed_plugins = os.listdir(bundle)
 
     if args.what == "update":
-        for p in plugins:
+        for p in installed_plugins:
 
             print("* Updating {}".format(p))
             print(subprocess.check_output(
@@ -69,10 +65,17 @@ if __name__=="__main__":
                 stderr=subprocess.STDOUT,
                 cwd=os.path.join(bundle, p)))
 
-    else:
-        pass
+    elif args.what == "init":
+        if len(installed_plugins):
+            print("Bundle directory is not empty")
+            sys.exit(1)
 
-        # for plug, url in plugins.iteritems():
-            #os.system("echo {0} {1}".format(plug, url))
-            # os.system("git clone --recursive {1} {0}".format(plug, url))
+        for plug, url in plugins.items():
+            print("* Updating {}".format(plug))
+            subprocess.run(
+                ["git", "clone", "--verbose", "--recursive", url, plug],
+                text=True,
+                check=True,
+                cwd=bundle)
+
 
