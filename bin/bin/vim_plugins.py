@@ -14,7 +14,7 @@ plugins = {
         "ack":"https://github.com/mileszs/ack.vim.git",
         "auto-pairs":"https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks":"https://github.com/MattesGroeger/vim-bookmarks.git",
-        "ctrlp":"https://github.com/ctrlpvim/ctrlp.vim.git",
+        # "ctrlp":"https://github.com/ctrlpvim/ctrlp.vim.git",
         "denite":"https://github.com/Shougo/denite.nvim.git",
         "deoplete":"https://github.com/Shougo/deoplete.nvim.git",
         "dirvish":"https://github.com/justinmk/vim-dirvish.git",
