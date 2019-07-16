@@ -46,11 +46,15 @@ plugins = {
         }
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    bundle = os.path.join(os.path.expanduser("~"), ".vim", "bundle")
+    if os.name == "nt":
+        bundle = os.path.join(os.path.expanduser("~"), "Neovim", "share", "nvim", "runtime", "bundle")
+    else
+        bundle = os.path.join(os.path.expanduser("~"), ".vim", "bundle")
+
     os.chdir(bundle)
 
     installed_plugins = os.listdir(bundle)
