@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     if os.name == "nt":
         bundle = os.path.join(os.path.expanduser("~"), "Neovim", "share", "nvim", "runtime", "bundle")
-    else
+    else:
         bundle = os.path.join(os.path.expanduser("~"), ".vim", "bundle")
 
     os.chdir(bundle)
