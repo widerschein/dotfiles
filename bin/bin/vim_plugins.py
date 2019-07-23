@@ -14,6 +14,7 @@ plugins = {
         "ack":"https://github.com/mileszs/ack.vim.git",
         "auto-pairs":"https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks":"https://github.com/MattesGroeger/vim-bookmarks.git",
+        "bufexplorer":"https://github.com/jlanzarotta/bufexplorer.git",
         # "ctrlp":"https://github.com/ctrlpvim/ctrlp.vim.git",
         "denite":"https://github.com/Shougo/denite.nvim.git",
         "deoplete":"https://github.com/Shougo/deoplete.nvim.git",
@@ -40,8 +41,8 @@ plugins = {
         "tern":"https://github.com/ternjs/tern_for_vim.git",
         "ultisnips":"https://github.com/SirVer/ultisnips.git",
         # "unimpaired":"https://github.com/tpope/vim-unimpaired.git",
-        "unite":"https://github.com/Shougo/unite.vim.git",
-        "unite-outline":"https://github.com/Shougo/unite-outline.git",
+        # "unite":"https://github.com/Shougo/unite.vim.git",
+        # "unite-outline":"https://github.com/Shougo/unite-outline.git",
         "vim-colors-solarized":"https://github.com/altercation/vim-colors-solarized.git",
         }
 
