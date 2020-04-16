@@ -12,7 +12,7 @@ parser.add_argument("what", help="Manage bundle", choices=["init", "update"])
 plugins = {
         "a": "https://github.com/vim-scripts/a.vim.git",
         "ack": "https://github.com/mileszs/ack.vim.git",
-        "ale": "git clone https://github.com/dense-analysis/ale.git",
+        "ale": "https://github.com/dense-analysis/ale.git",
         "auto-pairs": "https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks": "https://github.com/MattesGroeger/vim-bookmarks.git",
         "bufexplorer": "https://github.com/jlanzarotta/bufexplorer.git",
