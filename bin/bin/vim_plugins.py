@@ -49,9 +49,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if os.name == "nt":
-        bundle_dir = Path.home() / "Neovim" / "share" / "nvim" / "runtime" / "bundle"
+        bundle_dir = Path.home() / "Neovim" / "share" / "nvim" / "runtime" / "pack" / "plugins" / "start"
     else:
-        bundle_dir = Path.home() / ".vim" / "bundle"
+        bundle_dir = Path.home() / ".vim" / "pack" / "plugins" / "start"
 
     if args.what == "update":
         for plug_dir in bundle_dir.iterdir():
@@ -63,6 +63,7 @@ if __name__ == "__main__":
                 cwd=plug_dir))
 
     elif args.what == "init":
+        bundle_dir.mkdir(parents=True, exist_ok=True)
         if len(list(bundle_dir.iterdir())):
             print("Bundle directory is not empty")
             sys.exit(1)
