@@ -16,7 +16,6 @@ plugins = {
         "auto-pairs": "https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks": "https://github.com/MattesGroeger/vim-bookmarks.git",
         "bufexplorer": "https://github.com/jlanzarotta/bufexplorer.git",
-        # "ctrlp": "https://github.com/ctrlpvim/ctrlp.vim.git",
         "denite": "https://github.com/Shougo/denite.nvim.git",
         "deoplete": "https://github.com/Shougo/deoplete.nvim.git",
         "dirvish": "https://github.com/justinmk/vim-dirvish.git",
@@ -30,7 +29,7 @@ plugins = {
         "jedi-vim": "https://github.com/davidhalter/jedi-vim.git",
         "misc": "https://github.com/xolox/vim-misc.git",
         "nerdcommenter": "https://github.com/scrooloose/nerdcommenter.git",
-        "rainbow": "https://github.com/junegunn/rainbow_parentheses.vim.git",
+        "rainbow": "https://github.com/luochen1990/rainbow",
         "sensible": "https://github.com/tpope/vim-sensible.git",
         "session": "https://github.com/xolox/vim-session.git",
         "sneak": "https://github.com/justinmk/vim-sneak.git",
@@ -41,9 +40,6 @@ plugins = {
         "tagbar": "https://github.com/majutsushi/tagbar.git",
         "tern": "https://github.com/ternjs/tern_for_vim.git",
         "ultisnips": "https://github.com/SirVer/ultisnips.git",
-        # "unimpaired": "https://github.com/tpope/vim-unimpaired.git",
-        # "unite": "https://github.com/Shougo/unite.vim.git",
-        # "unite-outline": "https://github.com/Shougo/unite-outline.git",
         "vim-colors-solarized": "https://github.com/altercation/vim-colors-solarized.git",
         }
 
