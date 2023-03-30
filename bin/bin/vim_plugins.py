@@ -55,10 +55,9 @@ if __name__ == "__main__":
 
     if args.what == "update":
         for plug_dir in bundle_dir.iterdir():
-
             print("* Updating {}".format(plug_dir.name))
             print(subprocess.check_output(
-                ["git", "pull"],
+                ["git", "pull", "--recurse-submodules"],
                 text=True,
                 stderr=subprocess.STDOUT,
                 cwd=plug_dir))
