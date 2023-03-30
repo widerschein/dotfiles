@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import os
 import sys
 import argparse
 import subprocess
+from pathlib import Path
 
 parser = argparse.ArgumentParser(description="Manage Vim plugins")
 parser.add_argument("what", help="Manage bundle", choices=["init", "update"])
@@ -49,35 +49,31 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if os.name == "nt":
-        bundle = os.path.join(os.path.expanduser("~"), "Neovim", "share", "nvim", "runtime", "bundle")
+        bundle_dir = Path.home() / "Neovim" / "share" / "nvim" / "runtime" / "bundle"
     else:
-        bundle = os.path.join(os.path.expanduser("~"), ".vim", "bundle")
-
-    os.chdir(bundle)
-
-    installed_plugins = os.listdir(bundle)
+        bundle_dir = Path.home() / ".vim" / "bundle"
 
     if args.what == "update":
-        for p in installed_plugins:
+        for plug_dir in bundle_dir.iterdir():
 
-            print("* Updating {}".format(p))
+            print("* Updating {}".format(plug_dir.name))
             print(subprocess.check_output(
                 ["git", "pull"],
                 text=True,
                 stderr=subprocess.STDOUT,
-                cwd=os.path.join(bundle, p)))
+                cwd=plug_dir))
 
     elif args.what == "init":
-        if len(installed_plugins):
+        if len(list(bundle_dir.iterdir())):
             print("Bundle directory is not empty")
             sys.exit(1)
 
         for plug, url in plugins.items():
-            print("* Updating {}".format(plug))
+            print("* Installing {}".format(plug))
             subprocess.run(
                 ["git", "clone", "--verbose", "--recursive", url, plug],
                 text=True,
                 check=True,
-                cwd=bundle)
+                cwd=bundle_dir)
 
 
