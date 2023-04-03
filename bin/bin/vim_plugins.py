@@ -38,7 +38,6 @@ plugins = {
         "surround": "https://github.com/tpope/vim-surround.git",
         "tabular": "https://github.com/godlygeek/tabular.git",
         "tagbar": "https://github.com/majutsushi/tagbar.git",
-        "tern": "https://github.com/ternjs/tern_for_vim.git",
         "ultisnips": "https://github.com/SirVer/ultisnips.git",
         "vim-colors-solarized": "https://github.com/altercation/vim-colors-solarized.git",
         }
