@@ -27,6 +27,7 @@ plugins = {
         "is": "https://github.com/haya14busa/is.vim.git",
         "javascript": "https://github.com/pangloss/vim-javascript.git",
         "jedi-vim": "https://github.com/davidhalter/jedi-vim.git",
+        "lualine": "https://github.com/nvim-lualine/lualine.nvim.git"
         "misc": "https://github.com/xolox/vim-misc.git",
         "nerdcommenter": "https://github.com/scrooloose/nerdcommenter.git",
         "rainbow": "https://github.com/luochen1990/rainbow",
