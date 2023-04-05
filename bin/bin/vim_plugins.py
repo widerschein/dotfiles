@@ -24,7 +24,6 @@ plugins = {
         "fugitive": "https://github.com/tpope/vim-fugitive.git",
         "gitgutter": "https://github.com/airblade/vim-gitgutter.git",
         "gundo": "https://github.com/sjl/gundo.vim.git",
-        "is": "https://github.com/haya14busa/is.vim.git",
         "javascript": "https://github.com/pangloss/vim-javascript.git",
         "jedi-vim": "https://github.com/davidhalter/jedi-vim.git",
         "lualine": "https://github.com/nvim-lualine/lualine.nvim.git",
