@@ -20,6 +20,7 @@ plugins = {
         "dirvish": "https://github.com/justinmk/vim-dirvish.git",
         "dispatch": "https://github.com/tpope/vim-dispatch.git",
         "easymotion": "https://github.com/easymotion/vim-easymotion.git",
+        "everforest": "https://github.com/sainnhe/everforest.git",
         "fugitive": "https://github.com/tpope/vim-fugitive.git",
         "gitgutter": "https://github.com/airblade/vim-gitgutter.git",
         "javascript": "https://github.com/pangloss/vim-javascript.git",
@@ -38,8 +39,7 @@ plugins = {
         "tabular": "https://github.com/godlygeek/tabular.git",
         "tagbar": "https://github.com/majutsushi/tagbar.git",
         "telescope": "https://github.com/nvim-telescope/telescope.nvim.git",
-        "ultisnips": "https://github.com/SirVer/ultisnips.git",
-        "vim-colors-solarized": "https://github.com/altercation/vim-colors-solarized.git",
+        "ultisnips": "https://github.com/SirVer/ultisnips.git"
         }
 
 
