@@ -1,5 +1,68 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+# Schemes
+
+schemes:
+  solarized_dark: &solarized_dark
+    primary:
+      background: '#002b36' # base03
+      foreground: '#839496' # base0
+
+    cursor:
+      text:   '#002b36' # base03
+      cursor: '#839496' # base0
+
+    normal:
+      black:   '#073642' # base02
+      red:     '#dc322f' # red
+      green:   '#859900' # green
+      yellow:  '#b58900' # yellow
+      blue:    '#268bd2' # blue
+      magenta: '#d33682' # magenta
+      cyan:    '#2aa198' # cyan
+      white:   '#eee8d5' # base2
+
+    bright:
+      black:   '#002b36' # base03
+      red:     '#cb4b16' # orange
+      green:   '#586e75' # base01
+      yellow:  '#657b83' # base00
+      blue:    '#839496' # base0
+      magenta: '#6c71c4' # violet
+      cyan:    '#93a1a1' # base1
+      white:   '#fdf6e3' # base3
+
+  everforest_dark_medium: &everforest_dark_medium
+    primary:
+      background: '#2d353b'
+      foreground: '#d3c6aa'
+
+    cursor:
+      text:   '#2d353b'
+      cursor: '#d3c6aa'
+
+    normal:
+      black:   '#475258'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+
+    bright:
+      black:   '#475258'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+
+# Configuration
+
 window:
   resize_increments: true
 
@@ -23,37 +86,9 @@ font:
 
   size: 12.0
 
-# Colors (Solarized Dark)
-colors:
-  primary:
-    background: '#002b36' # base03
-    foreground: '#839496' # base0
-
-  cursor:
-    text:   '#002b36' # base03
-    cursor: '#839496' # base0
-
-  normal:
-    black:   '#073642' # base02
-    red:     '#dc322f' # red
-    green:   '#859900' # green
-    yellow:  '#b58900' # yellow
-    blue:    '#268bd2' # blue
-    magenta: '#d33682' # magenta
-    cyan:    '#2aa198' # cyan
-    white:   '#eee8d5' # base2
-
-  bright:
-    black:   '#002b36' # base03
-    red:     '#cb4b16' # orange
-    green:   '#586e75' # base01
-    yellow:  '#657b83' # base00
-    blue:    '#839496' # base0
-    magenta: '#6c71c4' # violet
-    cyan:    '#93a1a1' # base1
-    white:   '#fdf6e3' # base3
-
 # Key bindings
 key_bindings:
   - key: F11
     action: ToggleFullscreen
+
+colors: *everforest_dark_medium
