@@ -16,7 +16,6 @@ plugins = {
         "auto-pairs": "https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks": "https://github.com/MattesGroeger/vim-bookmarks.git",
         "bufexplorer": "https://github.com/jlanzarotta/bufexplorer.git",
-        "denite": "https://github.com/Shougo/denite.nvim.git",
         "deoplete": "https://github.com/Shougo/deoplete.nvim.git",
         "dirvish": "https://github.com/justinmk/vim-dirvish.git",
         "dispatch": "https://github.com/tpope/vim-dispatch.git",
@@ -28,6 +27,7 @@ plugins = {
         "lualine": "https://github.com/nvim-lualine/lualine.nvim.git",
         "misc": "https://github.com/xolox/vim-misc.git",
         "nerdcommenter": "https://github.com/scrooloose/nerdcommenter.git",
+        "plenary": "https://github.com/nvim-lua/plenary.nvim.git",
         "rainbow": "https://github.com/luochen1990/rainbow",
         "sensible": "https://github.com/tpope/vim-sensible.git",
         "session": "https://github.com/xolox/vim-session.git",
@@ -37,6 +37,7 @@ plugins = {
         "surround": "https://github.com/tpope/vim-surround.git",
         "tabular": "https://github.com/godlygeek/tabular.git",
         "tagbar": "https://github.com/majutsushi/tagbar.git",
+        "telescope": "https://github.com/nvim-telescope/telescope.nvim.git",
         "ultisnips": "https://github.com/SirVer/ultisnips.git",
         "vim-colors-solarized": "https://github.com/altercation/vim-colors-solarized.git",
         }
