@@ -567,7 +567,7 @@ end
 
 run_once("amarok")
 awful.util.spawn_with_shell("xset m 3 2")
-awful.util.spawn_with_shell("xset r rate 350 25")
+awful.util.spawn_with_shell("xset r rate 250 35")
 --awful.util.spawn_with_shell("setxkbmap -option \"lv3:caps_switch\"")
 run_once("picom &")
 
