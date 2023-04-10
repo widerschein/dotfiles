@@ -10,13 +10,16 @@ parser = argparse.ArgumentParser(description="Manage Vim plugins")
 parser.add_argument("what", help="Manage bundle", choices=["init", "update"])
 
 plugins = {
-        "a": "https://github.com/vim-scripts/a.vim.git",
         "ack": "https://github.com/mileszs/ack.vim.git",
-        "ale": "https://github.com/dense-analysis/ale.git",
+        "a": "https://github.com/vim-scripts/a.vim.git",
         "auto-pairs": "https://github.com/jiangmiao/auto-pairs.git",
         "bookmarks": "https://github.com/MattesGroeger/vim-bookmarks.git",
         "bufexplorer": "https://github.com/jlanzarotta/bufexplorer.git",
-        "deoplete": "https://github.com/Shougo/deoplete.nvim.git",
+        "cmp-buffer": "https://github.com/hrsh7th/cmp-buffer.git",
+        "cmp": "https://github.com/hrsh7th/nvim-cmp.git",
+        "cmp-lsp": "https://github.com/hrsh7th/cmp-nvim-lsp.git",
+        "cmp-path": "https://github.com/hrsh7th/cmp-path.git",
+        "cmp-ultisnips": "https://github.com/quangnguyen30192/cmp-nvim-ultisnips.git",
         "dirvish": "https://github.com/justinmk/vim-dirvish.git",
         "dispatch": "https://github.com/tpope/vim-dispatch.git",
         "easymotion": "https://github.com/easymotion/vim-easymotion.git",
@@ -25,6 +28,7 @@ plugins = {
         "gitgutter": "https://github.com/airblade/vim-gitgutter.git",
         "javascript": "https://github.com/pangloss/vim-javascript.git",
         "jedi-vim": "https://github.com/davidhalter/jedi-vim.git",
+        "lsp-config": "https://github.com/neovim/nvim-lspconfig.git",
         "lualine": "https://github.com/nvim-lualine/lualine.nvim.git",
         "misc": "https://github.com/xolox/vim-misc.git",
         "nerdcommenter": "https://github.com/scrooloose/nerdcommenter.git",
