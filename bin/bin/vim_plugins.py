@@ -22,7 +22,6 @@ plugins = {
         "cmp-ultisnips": "https://github.com/quangnguyen30192/cmp-nvim-ultisnips.git",
         "dirvish": "https://github.com/justinmk/vim-dirvish.git",
         "dispatch": "https://github.com/tpope/vim-dispatch.git",
-        "easymotion": "https://github.com/easymotion/vim-easymotion.git",
         "everforest": "https://github.com/sainnhe/everforest.git",
         "fugitive": "https://github.com/tpope/vim-fugitive.git",
         "gitgutter": "https://github.com/airblade/vim-gitgutter.git",
