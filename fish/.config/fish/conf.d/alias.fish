@@ -1,3 +1,11 @@
 alias nv="nvim"
 alias r="ranger"
 alias f="fzf"
+
+alias gs="git status"
+alias ga="git add"
+alias gb="git branch"
+alias gps="git push"
+alias gpl="git pull -r"
+alias stash="git stash"
+alias pop="git stash pop"
