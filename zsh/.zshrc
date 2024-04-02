@@ -6,6 +6,9 @@ fi
 
 export EDITOR=nvim
 
+export FZF_DEFAULT_COMMAND='rg --hidden --files'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
