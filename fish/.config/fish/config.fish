@@ -14,6 +14,14 @@ if test -d ~/.autojump
     source ~/.autojump/share/autojump/autojump.fish
 end
 
+# Bass
+set -l bass_dir ~/Programme/bass
+if not test -d $bass_dir
+    echo "Setting up bass"
+    mkdir -p $bass_dir
+    git clone https://github.com/edc/bass.git $bass_dir
+    make -C $bass_dir install
+end
 
 # Prompt
 #set -g __fish_git_prompt_shorten_branch_len 10
