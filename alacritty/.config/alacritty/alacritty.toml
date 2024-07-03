@@ -1,7 +1,7 @@
 import = [
-    "~/.config/alacritty/colors/solarized.toml"
-    #"~/.config/alacritty/colors/everforest.toml"
-    #"~/.config/alacritty/colors/kanagawa.toml"
+    "colors/solarized.toml"
+    #"colors/everforest.toml"
+    #"colors/kanagawa.toml"
 ]
 
 [font]
