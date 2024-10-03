@@ -1,3 +1,4 @@
+[general]
 import = [
     "colors/solarized.toml"
     #"colors/everforest.toml"
