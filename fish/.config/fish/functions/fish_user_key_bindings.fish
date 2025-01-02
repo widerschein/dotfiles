@@ -1,5 +1,5 @@
 function fish_user_key_bindings
-    fzf --fish | source
+    #fzf --fish | source
 
     # Use vi mode with emacs key bindings in insert mode
     fish_default_key_bindings -M insert
