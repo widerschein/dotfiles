@@ -13,7 +13,7 @@ export FZF_DEFAULT_COMMAND='rg --hidden --files'
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
 # completions
-#fpath=(~/Programme/zsh-completions/src $fpath)
+fpath=(~/Programme/zsh-completions/src $fpath)
 
 setxkbmap -option ctrl:nocaps
 
@@ -67,6 +67,7 @@ zstyle ':completion:*:*:gdb:*' command 'ps -u $LOGNAME -o pid,user,command -w'
 setopt COMPLETE_IN_WORD
 setopt AUTO_MENU           # Show completion menu on a successive tab press.
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
+setopt PROMPT_SUBST
 
 #------------------------------------
 # Aliases
@@ -96,13 +97,16 @@ alias pop='git stash pop'
 #------------------------------------
 
 
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' check-for-changes true
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git
+#
+#zstyle ':vcs_info:*' check-for-changes true
+#zstyle ':vcs_info:git:*' actionformats '%F{red}(%b)%f'
+#zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f'
 
-precmd () {
-    vcs_info
-}
+#precmd () {
+    #vcs_info
+#}
 
 setprompt() {
   setopt prompt_subst
@@ -114,8 +118,6 @@ setprompt() {
   fi
 
   PROMPT='%(!.%F{red}%n%f.%F{yellow}%n%f)%F{cyan}@%f%F{red}${p_host}%f %F{blue}%C%f%  '
-
-  #RPROMPT=$'${vcs_info_msg_0_}'
 }
 setprompt
 
@@ -124,8 +126,8 @@ setprompt
 # History
 #------------------------------------
 HISTFILE=~/.histfile
-HISTSIZE=9000
-SAVEHIST=9000
+HISTSIZE=50000
+SAVEHIST=50000
 
 setopt append_history
 setopt hist_ignore_dups
