@@ -80,7 +80,7 @@ alias ...='cd ../..'
 
 alias nv='nvim'
 alias r='ranger'
-alias f='fzf'
+alias f='fzf-tmux'
 
 alias gs='git status'
 alias ga='git add'
